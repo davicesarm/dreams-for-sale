@@ -1,6 +1,5 @@
 # Dreams for Sale
 
-
 Bem-vindo ao repositório do **Dreams for Sale** - um portal online onde os sonhos se tornam realidade. Este site oferece uma experiência única, onde produtos fantásticos e futuristas, que vivem na imaginação, são apresentados como itens disponíveis para compra.
 
 <a href="https://davicesarmorais.github.io/dreams-for-sale"><img src="./preview.png"></a>
@@ -29,24 +28,50 @@ Bem-vindo ao repositório do **Dreams for Sale** - um portal online onde os sonh
 ## Estrutura de Pastas
 
 ```plaintext
-/
-├── css /                       # Estilos (css) usados 
-├── imgs/                       # Imagens usadas no site
-├── pages/                      # Páginas internas
-│   ├── carrinho.html
-│   ├── contato.html
-│   ├── produtos.html
-│   ├── product/
-│   │   ├── dream-synth.html
-│   │   ├── flying-car.html
-├── index.html                  # Página principal do site
+dreams-for-sale/
+├── public/
+│   ├── products/
+│   │   ├── dream-synth.png
+│   │   ├── flavor-forge.png
+│   │   ├── flying-car.png
+│   │   ├── hoverboard.png
+│   │   ├── quantum-key.png
+│   │   ├── sentient.png
+│   │   ├── smart-shoe.png
+│   │   ├── teleport-cube.png
+│   │   └── time-capsule.png
+│   ├── background.jpg
+│   └── dreams-for-sale-icon.png
+├── src/
+│   ├── app/
+│   │   ├── produtos/
+│   │   │   ├── [id]/
+│   │   │   │   └── page.tsx
+│   │   │   └── page.tsx
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── home/
+│   │   │   ├── Header.tsx
+│   │   │   └── OnSale.tsx
+│   │   ├── Button.tsx
+│   │   └── Navbar.tsx
+│   └── data/
+│   │   └── products.ts
+├── .gitignore
+├── README.md
+├── eslint.config.mjs
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+└── tsconfig.json
 ```
 
 ## Tecnologias Utilizadas
 
-- **HTML5:** Estruturação e semântica do site.
-- **CSS3:** Estilização e layout.
-- **Tailwind CSS:** Esilização e layout.
-- **Google Fonts:** Integração com a fonte *Inter*.
-- **Material Icons e Font Awesome:** Ícones utilizados na interface.
-- **Google Maps Embed API:** Mapa embutido na seção de contato.
+- **Next.js:** Estrutura e rotas.
+- **Typescript:** Linguagem usada.
+- **React:** Biblioteca usada.
+- **Tailwind CSS:** Estilização e layout.
