@@ -1,9 +1,11 @@
-import Image from "next/image";
+import Header from "@/components/home/Header";
+import OnSale from "@/components/home/OnSale";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
+    <>
+      <Header />
+      <OnSale />
+    </>
   );
 }
