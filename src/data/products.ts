@@ -1,13 +1,4 @@
-export interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  reviews: number;
-  rating: number;
-  imagePath: string;
-  prevPrice?: number;
-}
+import { Product } from "@/utils/types";
 
 export const products: Product[] = [
   {
@@ -79,7 +70,7 @@ export const products: Product[] = [
       "Um sapato que ajusta o tamanho e o formato automaticamente, garantindo conforto em diferentes tipos de terrenos e atividades físicas.",
     price: 249.99,
     reviews: 85,
-    rating: 4.5,
+    rating: 3.5,
     imagePath: "/products/smart-shoe.png",
   },
   {

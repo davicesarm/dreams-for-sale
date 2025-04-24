@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { products } from "@/data/products";
+import ProductItem from "@/components/ProductItem";
 
 export default function ProductPage() {
   const { id } = useParams();
@@ -9,16 +10,15 @@ export default function ProductPage() {
 
   if (!product) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen">
-        <h1 className="text-4xl font-bold">Product not found</h1>
+      <div className="flex justify-center mt-8">
+        <h1 className="text-4xl font-bold">Produto não encontrado :(</h1>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col items-center">
-      <h1 className="text-4xl font-bold">{product.name}</h1>
-      <p className="mt-4 text-lg">{product.id}</p>
+    <div className="flex justify-center mt-8">
+      <ProductItem product={product} />
     </div>
   );
 }
