@@ -4,7 +4,7 @@ import { MdOutlineDarkMode } from "react-icons/md";
 
 export default function Navbar() {
   return (
-    <nav className="bg-[url('/background.jpg')] m-3 mb-5 px-5 py-4 z-40 sticky top-0 rounded-xl shadow-dream flex justify-between">
+    <nav className="bg-[url('/background.jpg')] m-3 mb-5 px-5 py-4 z-40 sticky top-1 rounded-xl shadow-dream flex justify-between">
       <Link className="hover:drop-shadow-glow flex gap-2 items-center" href="/">
         <MdOutlineDarkMode className="text-2xl" />
         <h1 className="hidden font-bold md:block lg:text-2xl">

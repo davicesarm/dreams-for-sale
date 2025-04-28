@@ -2,9 +2,9 @@ import { Product } from "@/utils/types";
 import { formatCurrency } from "@/utils/utils";
 import Link from "next/link";
 import Image from "next/image";
-import Button from "./Button";
+import Button from "../common/Button";
 
-export default function ProductItem({
+export default function ProductCard({
   product,
   reverse,
 }: {
@@ -40,10 +40,14 @@ export default function ProductItem({
           className={`text-nowrap flex gap-1 flex-${
             reverse ? "row-reverse" : "row"
           }`}>
-          <s>{formatCurrency(product.prevPrice ?? 0)}</s>
-          <b>{formatCurrency(product.price)}</b>
+          {product.prevPrice && (
+            <span className="line-through">
+              {formatCurrency(product.prevPrice)}
+            </span>
+          )}
+          <span className="font-bold">{formatCurrency(product.price)}</span>
         </span>
-        <p className="font-light leading-5 text-ellipsis">
+        <p className="font-extralight leading-5 text-ellipsis">
           {product.description}
         </p>
         <Button reverse className="mt-4">
