@@ -1,3 +1,5 @@
+"use client";
+
 import {
   FaXTwitter,
   FaInstagram,
@@ -14,24 +16,24 @@ export default function Footer() {
         <div className="flex gap-5 text-2xl">
           <Link
             href=""
-            className="hover:text-dPurple-800 hover:bg-dWhite-200 duration-300 hover:scale-105 hover:drop-shadow-glow shadow-dream rounded-xl justify-center items-center border flex w-12 h-12">
-            <FaFacebook className="" />
+            className="hover:text-dPurple-800 hover:bg-dWhite-200 hover:border-dWhite-200 duration-300 hover:scale-105 hover:drop-shadow-glow shadow-dream rounded-xl justify-center items-center border flex w-12 h-12">
+            <FaFacebook />
           </Link>
-          <a
+          <Link
             href=""
-            className="hover:text-dPurple-800 hover:bg-dWhite-200 duration-300 hover:scale-105 hover:drop-shadow-glow shadow-dream rounded-xl justify-center items-center border flex  w-12 h-12">
+            className="hover:text-dPurple-800 hover:bg-dWhite-200 hover:border-dWhite-200 duration-300 hover:scale-105 hover:drop-shadow-glow shadow-dream rounded-xl justify-center items-center border flex  w-12 h-12">
             <FaInstagram />
-          </a>
-          <a
+          </Link>
+          <Link
             href=""
-            className="hover:text-dPurple-800 hover:bg-dWhite-200 duration-300 hover:scale-105 hover:drop-shadow-glow shadow-dream rounded-xl justify-center items-center border flex  w-12 h-12">
+            className="hover:text-dPurple-800 hover:bg-dWhite-200 hover:border-dWhite-200 duration-300 hover:scale-105 hover:drop-shadow-glow shadow-dream rounded-xl justify-center items-center border flex  w-12 h-12">
             <FaXTwitter />
-          </a>
-          <a
+          </Link>
+          <Link
             href=""
-            className="hover:text-dPurple-800 hover:bg-dWhite-200 duration-300 hover:scale-105 hover:drop-shadow-glow shadow-dream rounded-xl justify-center items-center border flex w-12 h-12">
-            <FaLinkedin className="" />
-          </a>
+            className="hover:text-dPurple-800 hover:bg-dWhite-200 hover:border-dWhite-200 duration-300 hover:scale-105 hover:drop-shadow-glow shadow-dream rounded-xl justify-center items-center border flex w-12 h-12">
+            <FaLinkedin />
+          </Link>
         </div>
         <div className="text-center mb-8 text-sm flex flex-col items-center">
           <p className="font-extralight">
@@ -39,9 +41,17 @@ export default function Footer() {
           </p>
           <p className="font-extralight">+55 4002-8992</p>
           <p className="mt-2 text-base text-dWhite-200 font-bold">
-            <a className="duration-300 hover:drop-shadow-glow" href="#">
+            <button
+              className="hover:cursor-pointer duration-300 hover:drop-shadow-glow"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}>
               Voltar ao topo
-            </a>
+            </button>
           </p>
         </div>
       </div>
